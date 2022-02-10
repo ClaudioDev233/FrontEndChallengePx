@@ -1,7 +1,15 @@
 import "./App.css";
-import Template from "./Components/Template";
+
+import { Routes, Route } from "react-router-dom";
+import Agendamento from "./Pages/Agendamentos";
 function App() {
-  return <Template></Template>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Agendamento />}></Route>
+      </Routes>
+    </>
+  );
 }
 
 export default App;
