@@ -4,6 +4,11 @@ import {
   Button,
   CalendarIcon,
   ActivityIcon,
+  TemplateHeader,
+  MagnifyingIcon,
+  ChatIcon,
+  NotificationIcon,
+  SettingsIcon,
 } from "./styles";
 import Logo from "../../Assets/Images/logo.png";
 
@@ -25,15 +30,23 @@ export default function Template() {
               </li>
               <li>
                 <Button>
+                  <ActivityIcon></ActivityIcon>
                   <p>Todos os Agendamentos</p>
                 </Button>
               </li>
             </ul>
           </TemplateMenu>
         </nav>
-        <header>
+        <TemplateHeader>
           <p>Agendamento</p>
-        </header>
+          <div>
+            <MagnifyingIcon></MagnifyingIcon> <input type="text"></input>
+            <div>
+              <ChatIcon></ChatIcon> <NotificationIcon></NotificationIcon>
+              <SettingsIcon></SettingsIcon>
+            </div>
+          </div>
+        </TemplateHeader>
       </TemplateContainer>
     </>
   );
