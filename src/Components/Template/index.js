@@ -1,32 +1,40 @@
+import {
+  TemplateMenu,
+  TemplateContainer,
+  Button,
+  CalendarIcon,
+  ActivityIcon,
+} from "./styles";
+import Logo from "../../Assets/Images/logo.png";
+
 export default function Template() {
   return (
     <>
-      <section>
+      <TemplateContainer>
         <nav>
           <section>
-            <p>Imagem</p>
+            <img src={Logo} alt="Logo"></img>
           </section>
-          <section>
+          <TemplateMenu>
             <ul>
               <li>
-                <div>
-                  <span>Icone</span>
+                <Button>
+                  <CalendarIcon></CalendarIcon>
                   <p>Agendamento</p>
-                </div>
+                </Button>
               </li>
               <li>
-                <div>
-                  <span>Icone</span>
+                <Button>
                   <p>Todos os Agendamentos</p>
-                </div>
+                </Button>
               </li>
             </ul>
-          </section>
-          <header>
-            <p>Titulo</p>
-          </header>
+          </TemplateMenu>
         </nav>
-      </section>
+        <header>
+          <p>Agendamento</p>
+        </header>
+      </TemplateContainer>
     </>
   );
 }
