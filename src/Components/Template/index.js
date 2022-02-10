@@ -9,6 +9,9 @@ import {
   ChatIcon,
   NotificationIcon,
   SettingsIcon,
+  SearchBar,
+  HeaderMenu,
+  Placeholder,
 } from "./styles";
 import Logo from "../../Assets/Images/logo.png";
 
@@ -39,13 +42,15 @@ export default function Template() {
         </nav>
         <TemplateHeader>
           <p>Agendamento</p>
-          <div>
+          <SearchBar>
             <MagnifyingIcon></MagnifyingIcon> <input type="text"></input>
-            <div>
-              <ChatIcon></ChatIcon> <NotificationIcon></NotificationIcon>
-              <SettingsIcon></SettingsIcon>
-            </div>
-          </div>
+          </SearchBar>
+          <HeaderMenu>
+            <ChatIcon></ChatIcon>
+            <NotificationIcon></NotificationIcon>
+            <SettingsIcon></SettingsIcon>
+            <Placeholder></Placeholder>
+          </HeaderMenu>
         </TemplateHeader>
       </TemplateContainer>
     </>

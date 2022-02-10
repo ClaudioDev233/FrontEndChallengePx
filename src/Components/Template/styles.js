@@ -33,6 +33,12 @@ export const TemplateHeader = styled.header`
   font-weight: bold;
 `;
 
+export const SearchBar = styled.div``;
+
+export const HeaderMenu = styled.div`
+  display: flex;
+`;
+
 export const Button = styled.div`
   display: flex;
   justify-content: center;
@@ -88,4 +94,10 @@ export const NotificationIcon = styled(Notifications)`
 export const SettingsIcon = styled(Settings)`
   height: 24px;
   width: 24px;
+`;
+
+export const Placeholder = styled.div`
+  width: 60px;
+  height: 60px;
+  background-color: gray;
 `;
