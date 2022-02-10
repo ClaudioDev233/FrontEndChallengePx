@@ -16,6 +16,8 @@ export const TemplateContainer = styled.section`
 
 export const TemplateMenu = styled.section`
   display: flex;
+  width: 345px
+  height:100%;
   flex-direction: column;
   ul {
     list-style-type: none;
@@ -27,16 +29,47 @@ export const TemplateMenu = styled.section`
 `;
 
 export const TemplateHeader = styled.header`
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: 10%;
+  justify-content: space-evenly;
+  align-items: center;
+
   font-size: 36px;
   font-weight: bold;
 `;
 
-export const SearchBar = styled.div``;
+export const SearchBar = styled.div`
+  width: 513px;
+  height: 60px;
+  border-radius: 16px;
+  padding: 2px 32px 2px 24px;
+  background-color: #fafafa;
+  input {
+    border: none;
+    outline: none;
+    background-color: #fafafa;
+  }
+`;
 
 export const HeaderMenu = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #a098ae;
+`;
+
+export const TemplateArea = styled.section`
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`;
+export const ChildrenContainer = styled.section`
+  background-color: #e5e5e5;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Button = styled.div`
@@ -77,8 +110,9 @@ export const ActivityIcon = styled(Activity)`
 `;
 
 export const MagnifyingIcon = styled(MagnifyingGlass)`
-  height: 24px;
-  width: 24px;
+  height: 32px;
+  width: 32px;
+  color: #4cbc9a;
 `;
 
 export const ChatIcon = styled(ChatTextFill)`
@@ -99,5 +133,11 @@ export const SettingsIcon = styled(Settings)`
 export const Placeholder = styled.div`
   width: 60px;
   height: 60px;
-  background-color: gray;
+  border-radius: 20px;
+  background-color: #a098ae;
+`;
+
+export const IconBox = styled.div`
+  width: 60px;
+  height: 60px;
 `;

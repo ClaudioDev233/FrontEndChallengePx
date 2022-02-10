@@ -12,10 +12,13 @@ import {
   SearchBar,
   HeaderMenu,
   Placeholder,
+  ChildrenContainer,
+  IconBox,
+  TemplateArea,
 } from "./styles";
 import Logo from "../../Assets/Images/logo.png";
 
-export default function Template() {
+export default function Template({ children }) {
   return (
     <>
       <TemplateContainer>
@@ -40,18 +43,34 @@ export default function Template() {
             </ul>
           </TemplateMenu>
         </nav>
-        <TemplateHeader>
-          <p>Agendamento</p>
-          <SearchBar>
-            <MagnifyingIcon></MagnifyingIcon> <input type="text"></input>
-          </SearchBar>
-          <HeaderMenu>
-            <ChatIcon></ChatIcon>
-            <NotificationIcon></NotificationIcon>
-            <SettingsIcon></SettingsIcon>
-            <Placeholder></Placeholder>
-          </HeaderMenu>
-        </TemplateHeader>
+
+        <TemplateArea>
+          <TemplateHeader>
+            <p>Agendamento</p>
+
+            <SearchBar>
+              <MagnifyingIcon></MagnifyingIcon> <input type="text"></input>
+            </SearchBar>
+
+            <HeaderMenu>
+              <IconBox>
+                <ChatIcon />
+              </IconBox>
+
+              <IconBox>
+                <NotificationIcon />
+              </IconBox>
+
+              <IconBox>
+                <SettingsIcon />
+              </IconBox>
+
+              <Placeholder></Placeholder>
+            </HeaderMenu>
+          </TemplateHeader>
+
+          <ChildrenContainer>{children}</ChildrenContainer>
+        </TemplateArea>
       </TemplateContainer>
     </>
   );
