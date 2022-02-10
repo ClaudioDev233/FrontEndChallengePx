@@ -5,17 +5,18 @@ import {
   CalendarIcon,
   ActivityIcon,
   TemplateHeader,
-  MagnifyingIcon,
   ChatIcon,
   NotificationIcon,
   SettingsIcon,
-  SearchBar,
   HeaderMenu,
   Placeholder,
   ChildrenContainer,
   IconBox,
   TemplateArea,
 } from "./styles";
+
+import SearchBar from "../SearchInput/index";
+
 import Logo from "../../Assets/Images/logo.png";
 
 export default function Template({ children }) {
@@ -23,10 +24,10 @@ export default function Template({ children }) {
     <>
       <TemplateContainer>
         <nav>
-          <section>
-            <img src={Logo} alt="Logo"></img>
-          </section>
           <TemplateMenu>
+            <section>
+              <img src={Logo} alt="Logo"></img>
+            </section>
             <ul>
               <li>
                 <Button>
@@ -48,9 +49,7 @@ export default function Template({ children }) {
           <TemplateHeader>
             <p>Agendamento</p>
 
-            <SearchBar>
-              <MagnifyingIcon></MagnifyingIcon> <input type="text"></input>
-            </SearchBar>
+            <SearchBar type="text"></SearchBar>
 
             <HeaderMenu>
               <IconBox>

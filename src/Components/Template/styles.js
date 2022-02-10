@@ -16,9 +16,12 @@ export const TemplateContainer = styled.section`
 
 export const TemplateMenu = styled.section`
   display: flex;
+ align-items: center;
   width: 345px
   height:100%;
+  gap: 50px;
   flex-direction: column;
+
   ul {
     list-style-type: none;
   }
