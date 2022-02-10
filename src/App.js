@@ -1,7 +1,7 @@
 import "./App.css";
-
+import Template from "./Components/Template";
 function App() {
-  return <div>Hello World</div>;
+  return <Template></Template>;
 }
 
 export default App;
