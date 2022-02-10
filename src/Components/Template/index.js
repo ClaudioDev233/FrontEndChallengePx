@@ -49,7 +49,7 @@ export default function Template({ children }) {
           <TemplateHeader>
             <p>Agendamento</p>
 
-            <SearchBar type="text"></SearchBar>
+            <SearchBar type="text" placeholder="Coiso"></SearchBar>
 
             <HeaderMenu>
               <IconBox>

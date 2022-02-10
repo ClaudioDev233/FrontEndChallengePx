@@ -3,10 +3,8 @@ export default function SearchBar({ ...props }) {
   return (
     <>
       <Search>
-        <label>
-          <MagnifyingIcon />
-          <input {...props}></input>
-        </label>
+        <MagnifyingIcon />
+        <input {...props}></input>
       </Search>
     </>
   );
