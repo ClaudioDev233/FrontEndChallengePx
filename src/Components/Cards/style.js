@@ -32,6 +32,7 @@ export const Progress = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 `;
 
 export const ProgressBar = styled.div`
@@ -47,4 +48,19 @@ export const Bar = styled.div`
   border-radius: 6px;
   background-color: ${(props) =>
     props.color === "Complete" ? "rgba(76, 188, 154)" : "rgba(254, 198, 79)"};
+`;
+
+export const Chavron = styled.span`
+  color: ${(props) =>
+    props.color === "Complete" ? "rgba(76, 188, 154)" : "rgba(254, 198, 79)"};
+`;
+
+export const Title = styled.p`
+  font-size: 18px;
+  font-weight: 500;
+`;
+
+export const Percentage = styled.span`
+  font-size: 18px;
+  font-weight: 700;
 `;

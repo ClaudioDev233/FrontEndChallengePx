@@ -1,32 +1,28 @@
-import { Bar, Card, Percent, Progress, ProgressBar } from "./style";
+import {
+  Bar,
+  Card,
+  Percent,
+  Percentage,
+  Progress,
+  ProgressBar,
+  Chavron,
+  Title,
+} from "./style";
 
-export default function Cards() {
+export default function Cards({ color, title }) {
   return (
     <>
       <Card>
-        <Percent color="Complete">
-          <span>75%</span>
+        <Percent color={color}>
+          <Percentage>75%</Percentage>
         </Percent>
         <Progress>
-          <p>Concluido</p>
+          <Title>{title}</Title>
           <ProgressBar>
-            <Bar color="Complete"></Bar>
+            <Bar color={color}></Bar>
           </ProgressBar>
         </Progress>
-        <span> &gt; </span>
-      </Card>
-
-      <Card>
-        <Percent>
-          <span>75%</span>
-        </Percent>
-        <Progress>
-          <p>Concluido</p>
-          <ProgressBar>
-            <Bar></Bar>
-          </ProgressBar>
-        </Progress>
-        <span> &gt; </span>
+        <Chavron color={color}> &gt; </Chavron>
       </Card>
     </>
   );
