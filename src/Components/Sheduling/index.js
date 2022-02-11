@@ -1,11 +1,19 @@
 import Cards from "../Cards";
+import UpcomingShedule from "../UpcomingShedule";
 
 export default function Shedule() {
   return (
     <>
-      <p>Tres Componentes</p>
-      <p>Exames Concluidos/Andamento</p>
-      <Cards></Cards>
+      <div>
+        Div flex normal pra separar tudo
+        <div>
+          Div com flex colunm
+          <p>Tres Componentes</p>
+          <p>Exames Concluidos/Andamento</p>
+          <Cards></Cards>
+          <UpcomingShedule></UpcomingShedule>
+        </div>
+      </div>
     </>
   );
 }
