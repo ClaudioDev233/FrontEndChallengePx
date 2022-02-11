@@ -17,7 +17,7 @@ export const TemplateContainer = styled.section`
 export const TemplateMenu = styled.section`
   display: flex;
   align-items: center;
-  width: 345px
+  width: 345px;
   height:100%;
   gap: 50px;
   padding-top: 6px;
@@ -54,6 +54,8 @@ export const Button = styled.div`
     background-color: #4cbc9a;
   }
 `;
+
+
 
 export const TemplateArea = styled.section`
   display: flex;
