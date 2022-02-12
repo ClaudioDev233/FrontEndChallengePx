@@ -1,15 +1,20 @@
 import styled from "styled-components";
 import { ArrowCircleUp } from "@styled-icons/evaicons-solid/ArrowCircleUp";
-export const CalendarContent = styled.div`
+export const Coiso = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 30px 40px 30px 40px;
   background-color: #ffffff;
   border-radius: 18px;
   margin: 20px;
   gap: 20px;
+  justify-content: center;
+`;
+
+export const CalendarContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const CalendarHeader = styled.div`
   display: flex;
@@ -60,6 +65,28 @@ export const TH = styled.th`
   width: 40px;
   height: 40px;
   color: ${(props) => (props.day === "Sunday" ? "#FC6B57" : "#A098AE")};
+`;
+
+export const MonitoringSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
+
+export const MonitoringText = styled.p`
+  font-size: 14px;
+  color: #a098ae;
+  text-align: center;
+`;
+
+export const MonitoringStatus = styled.div`
+  width: 260px;
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+
+  background-color: lightcoral;
 `;
 
 export const ProgressBar = styled.div`
