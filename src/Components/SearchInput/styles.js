@@ -13,6 +13,9 @@ export const Search = styled.div`
     border: none;
     outline: none;
     background-color: #fafafa;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
   }
 `;
 

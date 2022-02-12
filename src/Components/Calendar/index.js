@@ -12,10 +12,11 @@ import {
   Percentage,
   ArrowUp,
   InsideProgress,
-  Coiso,
+  CalendarAndMonitoring,
   MonitoringSection,
   MonitoringText,
   MonitoringStatus,
+  Circle,
 } from "./styles";
 import Moment from "react-moment";
 import moment from "moment";
@@ -23,7 +24,7 @@ import { useState, useEffect } from "react";
 export default function Calendar() {
   return (
     <>
-      <Coiso>
+      <CalendarAndMonitoring>
         <CalendarContent>
           <CalendarHeader>
             <Arrow> &lt; </Arrow>
@@ -114,17 +115,26 @@ export default function Calendar() {
           </MonitoringText>
           <MonitoringStatus>
             <div>
-              <p>Atencao</p>
-              <p>Noraml</p>
+              <p>
+                <Circle color="#4CBC9A" /> Normal
+              </p>
+              <p>
+                <Circle color="#FEC64F" />
+                Alerta
+              </p>
             </div>
 
             <div>
-              <p>Ferrou</p>
-              <p>Bixo</p>
+              <p>
+                <Circle color="#FFBABF" /> Atenção
+              </p>
+              <p>
+                <Circle color="#FC6B57" /> Critico
+              </p>
             </div>
           </MonitoringStatus>
         </MonitoringSection>
-      </Coiso>
+      </CalendarAndMonitoring>
     </>
   );
 }

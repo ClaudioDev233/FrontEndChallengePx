@@ -9,12 +9,12 @@ import {
   Title,
 } from "./style";
 
-export default function Cards({ color, title }) {
+export default function Cards({ color, title, percentage }) {
   return (
     <>
       <Card>
         <Percent color={color}>
-          <Percentage>75%</Percentage>
+          <Percentage>{percentage}%</Percentage>
         </Percent>
         <Progress>
           <Title>{title}</Title>

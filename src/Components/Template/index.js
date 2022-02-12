@@ -49,7 +49,10 @@ export default function Template({ children }) {
           <TemplateHeader>
             <p>Agendamento</p>
 
-            <SearchBar type="text" placeholder="Coiso"></SearchBar>
+            <SearchBar
+              type="text"
+              placeholder="Digite para pesquisar ..."
+            ></SearchBar>
 
             <HeaderMenu>
               <IconBox>

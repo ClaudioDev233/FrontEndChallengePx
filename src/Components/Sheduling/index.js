@@ -21,8 +21,8 @@ export default function Shedule() {
             <Title>Exames Concluídos/Andamento</Title>
 
             <SheduleCards>
-              <Cards color="Complete" title="Concluído"></Cards>
-              <Cards title="Em Andamento"></Cards>
+              <Cards color="Complete" title="Concluído" percentage="75"></Cards>
+              <Cards title="Em Andamento" percentage="25"></Cards>
             </SheduleCards>
           </SheduleLeftContent>
 

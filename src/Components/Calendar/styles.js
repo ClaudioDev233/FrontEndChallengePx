@@ -1,20 +1,22 @@
 import styled from "styled-components";
 import { ArrowCircleUp } from "@styled-icons/evaicons-solid/ArrowCircleUp";
-export const Coiso = styled.div`
+import { RadioCircle } from "@styled-icons/boxicons-regular/RadioCircle";
+export const CalendarAndMonitoring = styled.section`
   display: flex;
   padding: 30px 40px 30px 40px;
   background-color: #ffffff;
   border-radius: 18px;
-  margin: 20px;
+
   gap: 20px;
   justify-content: center;
 `;
 
-export const CalendarContent = styled.div`
+export const CalendarContent = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 `;
 export const CalendarHeader = styled.div`
   display: flex;
@@ -85,8 +87,6 @@ export const MonitoringStatus = styled.div`
   display: flex;
   justify-content: space-around;
   gap: 5px;
-
-  background-color: lightcoral;
 `;
 
 export const ProgressBar = styled.div`
@@ -125,4 +125,11 @@ export const ArrowUp = styled(ArrowCircleUp)`
   width: 25px;
   height: 25px;
   color: #4cbc9a;
+`;
+
+export const Circle = styled(RadioCircle)`
+  height: 15px;
+  width: 15px;
+  font-weight: bold;
+  color: ${(props) => props.color};
 `;

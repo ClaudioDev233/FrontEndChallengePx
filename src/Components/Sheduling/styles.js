@@ -43,4 +43,9 @@ export const Title = styled.p`
   font-weight: bold;
 `;
 
-export const SheduleRight = styled.div``;
+export const SheduleRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px 0 20px;
+`;
