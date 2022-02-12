@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { ArrowCircleUp } from "@styled-icons/evaicons-solid/ArrowCircleUp";
 export const CalendarContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -60,4 +60,42 @@ export const TH = styled.th`
   width: 40px;
   height: 40px;
   color: ${(props) => (props.day === "Sunday" ? "#FC6B57" : "#A098AE")};
+`;
+
+export const ProgressBar = styled.div`
+  text-align: center;
+`;
+
+export const Bar = styled.div`
+  width: 260px;
+  height: 130px;
+  overflow: hidden;
+  margin-bottom: -50px;
+`;
+
+export const Progress = styled.div`
+  width: 260px;
+  height: 260px;
+  border: 30px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-left-color: #4cbc9a;
+`;
+
+export const InsideProgress = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+`;
+
+export const Percentage = styled.span`
+  font-size: 36px;
+  font-weight: 600;
+`;
+
+export const ArrowUp = styled(ArrowCircleUp)`
+  width: 25px;
+  height: 25px;
+  color: #4cbc9a;
 `;

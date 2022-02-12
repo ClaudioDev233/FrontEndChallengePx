@@ -6,6 +6,12 @@ import {
   TH,
   Title,
   Arrow,
+  Bar,
+  Progress,
+  ProgressBar,
+  Percentage,
+  ArrowUp,
+  InsideProgress,
 } from "./styles";
 import Moment from "react-moment";
 import moment from "moment";
@@ -86,11 +92,15 @@ export default function Calendar() {
             </tbody>
           </table>
         </CalendarBody>
-        <div>
-          <div>
-            <div></div>
-          </div>
-        </div>
+        <ProgressBar>
+          <Bar>
+            <Progress></Progress>
+          </Bar>
+          <InsideProgress>
+            <ArrowUp />
+            <Percentage>25%</Percentage>
+          </InsideProgress>
+        </ProgressBar>
       </CalendarContent>
     </>
   );
