@@ -18,15 +18,27 @@ import {
   MonitoringStatus,
   Circle,
 } from "./styles";
-import Moment from "react-moment";
-import moment from "moment";
+
 import { useState, useEffect } from "react";
+import axios from "axios";
 export default function Calendar() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    function getData() {
+      axios
+        .get("http://localhost:3001/exames")
+        .then((resp) => setData(resp.data));
+    }
+    getData();
+  }, []);
+
   return (
     <>
       <CalendarAndMonitoring>
         <CalendarContent>
           <CalendarHeader>
+            <p>{data.length}</p>
             <Arrow> &lt; </Arrow>
             <Title>Fevereiro</Title>
             <Arrow> &gt; </Arrow>
@@ -52,42 +64,68 @@ export default function Calendar() {
                   >
                     31
                   </TD>
-                  <TD>1</TD>
-                  <TD>2</TD>
-                  <TD>3</TD>
-                  <TD>4</TD>
-                  <TD>5</TD>
+                  {data
+                    .filter((datas, index) => index >= 0 && index < 5)
+                    .map((filtro) => {
+                      return (
+                        <>
+                          <TD status={filtro.status}>{filtro.dia}</TD>
+                        </>
+                      );
+                    })}
                   <TD day="Sunday">6</TD>
                 </tr>
                 <tr>
-                  <TD>7</TD>
-                  <TD>8</TD>
-                  <TD>9</TD>
-                  <TD>10</TD>
-                  <TD>11</TD>
-                  <TD>12</TD>
+                  {data
+                    .filter((datas, index) => index > 5 && index < 12)
+                    .map((filtro) => {
+                      return (
+                        <>
+                          <TD status={filtro.status}>{filtro.dia}</TD>
+                        </>
+                      );
+                    })}
+
                   <TD day="Sunday">13</TD>
                 </tr>
                 <tr>
-                  <TD>14</TD>
-                  <TD>15</TD>
-                  <TD>16</TD>
-                  <TD>17</TD>
-                  <TD>18</TD>
-                  <TD>19</TD>
+                  {data
+                    .filter((datas, index) => index > 12 && index < 19)
+                    .map((filtro) => {
+                      return (
+                        <>
+                          <TD status={filtro.status}>{filtro.dia}</TD>
+                        </>
+                      );
+                    })}
                   <TD day="Sunday">20</TD>
                 </tr>
                 <tr>
-                  <TD>21</TD>
-                  <TD>22</TD>
-                  <TD>23</TD>
-                  <TD>24</TD>
-                  <TD>25</TD>
-                  <TD>26</TD>
+                  {data
+                    .filter((datas, index) => index > 19 && index < 26)
+                    .map((filtro) => {
+                      return (
+                        <>
+                          <TD day={filtro.status} status={filtro.status}>
+                            {filtro.dia}
+                          </TD>
+                        </>
+                      );
+                    })}
                   <TD day="Sunday">27</TD>
                 </tr>
                 <tr>
-                  <TD>28</TD>
+                  {data
+                    .filter((datas, index) => index === 27)
+                    .map((filtro) => {
+                      return (
+                        <>
+                          <TD day={filtro.status} status={filtro.status}>
+                            {filtro.dia}
+                          </TD>
+                        </>
+                      );
+                    })}
                   <TD day="OtherMonth">1</TD>
                   <TD day="OtherMonth">2</TD>
                   <TD day="OtherMonth">3</TD>

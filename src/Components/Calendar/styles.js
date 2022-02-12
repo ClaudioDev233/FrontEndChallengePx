@@ -39,17 +39,21 @@ export const CalendarBody = styled.div`
 
 export const TD = styled.td`
   font-size: 18px;
-  border-radius: 16px;
+  border-radius: 9px;
   text-align: center;
   vertical-align: middle;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+  width: 39px;
+  height: 39px;
+
   color: ${(props) =>
     props.day === "Sunday"
       ? "#FC6B57"
       : props.day === "OtherMonth"
       ? "#A098AE"
+      : props.day === "onGoing"
+      ? "#ffffff"
+      : props.day === "done"
+      ? "#ffffff"
       : "#374557"};
 
   background-color: ${(props) =>
