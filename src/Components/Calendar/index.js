@@ -1,4 +1,12 @@
-import { CalendarContent, CalendarHeader, CalendarBody } from "./styles";
+import {
+  CalendarContent,
+  CalendarHeader,
+  CalendarBody,
+  TD,
+  TH,
+  Title,
+  Arrow,
+} from "./styles";
 import Moment from "react-moment";
 import moment from "moment";
 import { useState, useEffect } from "react";
@@ -7,72 +15,82 @@ export default function Calendar() {
     <>
       <CalendarContent>
         <CalendarHeader>
-          <input type="button" value="<" />
-          <p>Fevereiro</p>
-          <input type="button" value=">" />
+          <Arrow> &lt; </Arrow>
+          <Title>Fevereiro</Title>
+          <Arrow> &gt; </Arrow>
         </CalendarHeader>
         <CalendarBody>
           <table>
             <thead>
               <tr>
-                <th>S</th>
-                <th>T</th>
-                <th>Q</th>
-                <th>Q</th>
-                <th>S</th>
-                <th>S</th>
-                <th>D</th>
+                <TH>S</TH>
+                <TH>T</TH>
+                <TH>Q</TH>
+                <TH>Q</TH>
+                <TH>S</TH>
+                <TH>S</TH>
+                <TH day="Sunday">D</TH>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td onClick={(e) => console.log(e.target.textContent)}>31</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
+                <TD
+                  day="OtherMonth"
+                  onClick={(e) => console.log(e.target.textContent)}
+                >
+                  31
+                </TD>
+                <TD>1</TD>
+                <TD>2</TD>
+                <TD>3</TD>
+                <TD>4</TD>
+                <TD>5</TD>
+                <TD day="Sunday">6</TD>
               </tr>
               <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
+                <TD>7</TD>
+                <TD>8</TD>
+                <TD>9</TD>
+                <TD>10</TD>
+                <TD>11</TD>
+                <TD>12</TD>
+                <TD day="Sunday">13</TD>
               </tr>
               <tr>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
+                <TD>14</TD>
+                <TD>15</TD>
+                <TD>16</TD>
+                <TD>17</TD>
+                <TD>18</TD>
+                <TD>19</TD>
+                <TD day="Sunday">20</TD>
               </tr>
               <tr>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
+                <TD>21</TD>
+                <TD>22</TD>
+                <TD>23</TD>
+                <TD>24</TD>
+                <TD>25</TD>
+                <TD>26</TD>
+                <TD day="Sunday">27</TD>
               </tr>
               <tr>
-                <td>28</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
+                <TD>28</TD>
+                <TD day="OtherMonth">1</TD>
+                <TD day="OtherMonth">2</TD>
+                <TD day="OtherMonth">3</TD>
+                <TD day="OtherMonth">4</TD>
+                <TD day="OtherMonth">5</TD>
+                <TD day="Sunday">6</TD>
               </tr>
             </tbody>
           </table>
         </CalendarBody>
+        <div>
+          <div>
+            <div></div>
+          </div>
+        </div>
       </CalendarContent>
     </>
   );
