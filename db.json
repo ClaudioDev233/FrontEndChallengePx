@@ -2,7 +2,27 @@
   "exames": [
     {
       "dia": "1",
-      "status": "done"
+      "status": "done",
+      "examesDia": [
+        {
+          "tipoA": [
+            {
+              "status": "done",
+              "horario": "10-11"
+            },
+            {
+              "status": "ongoing",
+              "horario": "10-11"
+            }
+          ],
+          "tipoB": [
+            {
+              "status": "done",
+              "horario": "10-11"
+            }
+          ]
+        }
+      ]
     },
     {
       "dia": "2",

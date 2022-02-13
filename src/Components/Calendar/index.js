@@ -33,12 +33,15 @@ export default function Calendar() {
     getData();
   }, []);
 
+  function handleExams(e) {
+    data[e].examesDia[0].tipoA.map((exames) => console.log(exames.status));
+    console.log(data[e].examesDia[0].tipoB);
+  }
   return (
     <>
       <CalendarAndMonitoring>
         <CalendarContent>
           <CalendarHeader>
-            <p>{data.length}</p>
             <Arrow> &lt; </Arrow>
             <Title>Fevereiro</Title>
             <Arrow> &gt; </Arrow>
@@ -69,7 +72,14 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD status={filtro.status}>{filtro.dia}</TD>
+                          <TD
+                            onClick={(e) => {
+                              handleExams(parseInt(e.target.textContent) - 1);
+                            }}
+                            status={filtro.status}
+                          >
+                            {filtro.dia}
+                          </TD>
                         </>
                       );
                     })}
