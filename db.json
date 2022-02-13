@@ -20,17 +20,34 @@
               "status": "done",
               "horario": "10-11"
             }
+          ],
+          "tipoC": [
+            {
+              "status": "done",
+              "horario": "10-11"
+            }
           ]
         }
       ]
     },
     {
       "dia": "2",
-      "status": "done"
+      "status": "done",
+      "examesDia": [
+        {
+          "tipoC": [
+            {
+              "status": "done",
+              "horario": "10-11"
+            }
+          ]
+        }
+      ]
     },
     {
       "dia": "3",
-      "status": "done"
+      "status": "done",
+      "examesDia": []
     },
     {
       "dia": "4",

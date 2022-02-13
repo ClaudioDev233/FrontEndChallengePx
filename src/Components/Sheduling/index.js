@@ -32,7 +32,7 @@ export default function Shedule() {
 
               <SeeAll>Visualizar Todos &gt;</SeeAll>
             </SheduleListHeader>
-
+            {/* esses cards serão gerados pelo contexto, tanto geral quanto do dia, logo esse componente também recebera informações do contexto */}
             <UpcomingShedule serverName="C"></UpcomingShedule>
             <UpcomingShedule serverName="B"></UpcomingShedule>
             <UpcomingShedule serverName="A"></UpcomingShedule>

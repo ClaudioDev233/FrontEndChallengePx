@@ -33,9 +33,39 @@ export default function Calendar() {
     getData();
   }, []);
 
+  //isso aqui vai para o contexto e meu evento onClick no calendario recebe a funcao setter do meu dia que vem do contexto
   function handleExams(e) {
-    data[e].examesDia[0].tipoA.map((exames) => console.log(exames.status));
-    console.log(data[e].examesDia[0].tipoB);
+    //validações pra ver se o exame de determinado tipo existe, se nao existir nao faz a parada
+
+    const exams = data[e].examesDia;
+
+    if (exams.length > 0) {
+      exams[0].tipoA
+        ? exams[0].tipoA.map((exames) =>
+            console.log(
+              "o exame A foi " + exames.status + " no horario " + exames.horario
+            )
+          )
+        : console.log("nada do A");
+
+      exams[0].tipoB
+        ? exams[0].tipoB.map((exames) =>
+            console.log(
+              "o exame B foi " + exames.status + " no horario " + exames.horario
+            )
+          )
+        : console.log("nada do B ");
+
+      exams[0].tipoC
+        ? exams[0].tipoC.map((exames) =>
+            console.log(
+              "o exame C foi " + exames.status + " no horario " + exames.horario
+            )
+          )
+        : console.log("nada do C ");
+
+      /* data[e].examesDia[0].tipoB.map((exames) => console.log(exames.status)); */
+    } else console.log("nãoe xistem examess nesse dia");
   }
   return (
     <>
@@ -61,12 +91,7 @@ export default function Calendar() {
               </thead>
               <tbody>
                 <tr>
-                  <TD
-                    day="OtherMonth"
-                    onClick={(e) => console.log(e.target.textContent)}
-                  >
-                    31
-                  </TD>
+                  <TD day="OtherMonth">31</TD>
                   {data
                     .filter((datas, index) => index >= 0 && index < 5)
                     .map((filtro) => {
@@ -83,6 +108,7 @@ export default function Calendar() {
                         </>
                       );
                     })}
+
                   <TD day="Sunday">6</TD>
                 </tr>
                 <tr>
@@ -108,8 +134,10 @@ export default function Calendar() {
                         </>
                       );
                     })}
+
                   <TD day="Sunday">20</TD>
                 </tr>
+
                 <tr>
                   {data
                     .filter((datas, index) => index > 19 && index < 26)
@@ -122,6 +150,7 @@ export default function Calendar() {
                         </>
                       );
                     })}
+
                   <TD day="Sunday">27</TD>
                 </tr>
                 <tr>
