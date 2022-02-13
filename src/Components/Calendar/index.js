@@ -17,6 +17,7 @@ import {
   MonitoringText,
   MonitoringStatus,
   Circle,
+  Table,
 } from "./styles";
 
 import { useState, useEffect } from "react";
@@ -77,7 +78,7 @@ export default function Calendar() {
             <Arrow> &gt; </Arrow>
           </CalendarHeader>
           <CalendarBody>
-            <table>
+            <Table>
               <thead>
                 <tr>
                   <TH>S</TH>
@@ -117,7 +118,9 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD status={filtro.status}>{filtro.dia}</TD>
+                          <TD day={filtro.status} status={filtro.status}>
+                            {filtro.dia}
+                          </TD>
                         </>
                       );
                     })}
@@ -130,7 +133,9 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD status={filtro.status}>{filtro.dia}</TD>
+                          <TD day={filtro.status} status={filtro.status}>
+                            {filtro.dia}
+                          </TD>
                         </>
                       );
                     })}
@@ -173,7 +178,7 @@ export default function Calendar() {
                   <TD day="Sunday">6</TD>
                 </tr>
               </tbody>
-            </table>
+            </Table>
           </CalendarBody>
         </CalendarContent>
         <MonitoringSection>

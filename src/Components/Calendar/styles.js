@@ -37,13 +37,23 @@ export const CalendarBody = styled.div`
   display: flex;
 `;
 
+export const Table = styled.table`
+  border-spacing: 5px;
+  border-collapse: separate;
+`;
+
+export const TR = styled.tr`
+  display: flex;
+  gap: 10px;
+`;
 export const TD = styled.td`
   font-size: 18px;
   border-radius: 9px;
   text-align: center;
   vertical-align: middle;
-  width: 39px;
-  height: 39px;
+  cursor: pointer;
+  width: 80px;
+  height: 40px;
 
   color: ${(props) =>
     props.day === "Sunday"
