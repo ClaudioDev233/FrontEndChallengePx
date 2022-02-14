@@ -20,10 +20,14 @@ import {
   Table,
 } from "./styles";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import { ExamsContext } from "../Context/ExamsContext";
+
 export default function Calendar() {
   const [data, setData] = useState([]);
+
+  const { funciona, day, setDay } = useContext(ExamsContext);
 
   useEffect(() => {
     function getData() {
@@ -34,40 +38,6 @@ export default function Calendar() {
     getData();
   }, []);
 
-  //isso aqui vai para o contexto e meu evento onClick no calendario recebe a funcao setter do meu dia que vem do contexto
-  function handleExams(e) {
-    //validações pra ver se o exame de determinado tipo existe, se nao existir nao faz a parada
-
-    const exams = data[e].examesDia;
-
-    if (exams.length > 0) {
-      exams[0].tipoA
-        ? exams[0].tipoA.map((exames) =>
-            console.log(
-              "o exame A foi " + exames.status + " no horario " + exames.horario
-            )
-          )
-        : console.log("nada do A");
-
-      exams[0].tipoB
-        ? exams[0].tipoB.map((exames) =>
-            console.log(
-              "o exame B foi " + exames.status + " no horario " + exames.horario
-            )
-          )
-        : console.log("nada do B ");
-
-      exams[0].tipoC
-        ? exams[0].tipoC.map((exames) =>
-            console.log(
-              "o exame C foi " + exames.status + " no horario " + exames.horario
-            )
-          )
-        : console.log("nada do C ");
-
-      /* data[e].examesDia[0].tipoB.map((exames) => console.log(exames.status)); */
-    } else console.log("nãoe xistem examess nesse dia");
-  }
   return (
     <>
       <CalendarAndMonitoring>
@@ -77,6 +47,7 @@ export default function Calendar() {
             <Title>Fevereiro</Title>
             <Arrow> &gt; </Arrow>
           </CalendarHeader>
+          <p>{funciona}</p>
           <CalendarBody>
             <Table>
               <thead>
@@ -99,9 +70,9 @@ export default function Calendar() {
                       return (
                         <>
                           <TD
-                            onClick={(e) => {
+                            /* onClick={(e) => {
                               handleExams(parseInt(e.target.textContent) - 1);
-                            }}
+                            }} */
                             status={filtro.status}
                           >
                             {filtro.dia}
@@ -110,7 +81,14 @@ export default function Calendar() {
                       );
                     })}
 
-                  <TD day="Sunday">6</TD>
+                  <TD
+                    day="Sunday"
+                    onClick={(e) => {
+                      setDay(parseInt(e.target.textContent) - 1);
+                    }}
+                  >
+                    6
+                  </TD>
                 </tr>
                 <tr>
                   {data
@@ -118,7 +96,13 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD day={filtro.status} status={filtro.status}>
+                          <TD
+                            onClick={(e) => {
+                              setDay(parseInt(e.target.textContent));
+                            }}
+                            day={filtro.status}
+                            status={filtro.status}
+                          >
                             {filtro.dia}
                           </TD>
                         </>

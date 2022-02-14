@@ -12,7 +12,7 @@ import {
   Hours,
 } from "./styles";
 
-export default function UpcomingShedule({ serverName }) {
+export default function UpcomingShedule({ serverName, date, horario }) {
   return (
     <>
       <SheduleCard>
@@ -21,11 +21,12 @@ export default function UpcomingShedule({ serverName }) {
           <CardTitle>
             <Title>Exames do servidor {serverName}</Title>
             <Dates>
-              <CalendarIcon />5 de Janeiro de 2021
+              <CalendarIcon />
+              {date} de Fevereiro de 2022
             </Dates>
             <Hours>
               <ClockIcon />
-              10H - 15H
+              {horario}
             </Hours>
           </CardTitle>
           <CardDescription>

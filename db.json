@@ -51,23 +51,47 @@
     },
     {
       "dia": "4",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "5",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "6",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "7",
-      "status": "done"
+      "status": "done",
+      "examesDia": [
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        }
+      ]
     },
     {
       "dia": "8",
-      "status": "done"
+      "status": "done",
+      "examesDia": [
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "C",
+          "horario": "10-11",
+          "status": "ongoing"
+        },
+        {
+          "tipo": "B",
+          "horario": "10-11",
+          "status": "coisado"
+        }
+      ]
     },
     {
       "dia": "9",
@@ -83,19 +107,19 @@
     },
     {
       "dia": "12",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "13",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "14",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "15",
-      "status": "done"
+      "status": ""
     },
     {
       "dia": "16",
