@@ -3,7 +3,7 @@ import axios from "axios";
 export const ExamsContext = createContext([]);
 
 export function ExamsProvider({ children }) {
-  const [day, setDay] = useState();
+  const [day, setDay] = useState(7);
 
   /* const [data, setData] = useState(); */
 

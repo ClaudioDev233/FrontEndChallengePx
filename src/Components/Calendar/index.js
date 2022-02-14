@@ -70,9 +70,10 @@ export default function Calendar() {
                       return (
                         <>
                           <TD
-                            /* onClick={(e) => {
-                              handleExams(parseInt(e.target.textContent) - 1);
-                            }} */
+                            onClick={(e) => {
+                              setDay(parseInt(e.target.textContent));
+                            }}
+                            day={filtro.status}
                             status={filtro.status}
                           >
                             {filtro.dia}
@@ -81,14 +82,7 @@ export default function Calendar() {
                       );
                     })}
 
-                  <TD
-                    day="Sunday"
-                    onClick={(e) => {
-                      setDay(parseInt(e.target.textContent) - 1);
-                    }}
-                  >
-                    6
-                  </TD>
+                  <TD day="Sunday">6</TD>
                 </tr>
                 <tr>
                   {data
@@ -117,7 +111,13 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD day={filtro.status} status={filtro.status}>
+                          <TD
+                            onClick={(e) => {
+                              setDay(parseInt(e.target.textContent));
+                            }}
+                            day={filtro.status}
+                            status={filtro.status}
+                          >
                             {filtro.dia}
                           </TD>
                         </>
@@ -133,7 +133,13 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD day={filtro.status} status={filtro.status}>
+                          <TD
+                            onClick={(e) => {
+                              setDay(parseInt(e.target.textContent));
+                            }}
+                            day={filtro.status}
+                            status={filtro.status}
+                          >
                             {filtro.dia}
                           </TD>
                         </>
@@ -148,7 +154,13 @@ export default function Calendar() {
                     .map((filtro) => {
                       return (
                         <>
-                          <TD day={filtro.status} status={filtro.status}>
+                          <TD
+                            onClick={(e) => {
+                              setDay(parseInt(e.target.textContent));
+                            }}
+                            day={filtro.status}
+                            status={filtro.status}
+                          >
                             {filtro.dia}
                           </TD>
                         </>

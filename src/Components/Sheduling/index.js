@@ -60,7 +60,7 @@ export default function Shedule() {
               <Title>Listagem de Agendamentos</Title>
               <SeeAll>Visualizar Todos &gt;</SeeAll>
             </SheduleListHeader>
-            <p>Aparece aqui embaixo ; dias {data.dia}</p>
+            <p>Aparece aqui embaixo ; dias {day}</p>
             {console.log(data)}
             {data.map((coisos) => {
               return (
