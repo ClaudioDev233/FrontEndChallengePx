@@ -85,7 +85,7 @@ export const HeaderMenu = styled.div`
 export const ChildrenContainer = styled.section`
   background-color: #fafafa;
   width: 100%;
-  height: 95vh;
+  height: ${(props) => (props.height === "fill" ? "100%" : "95vh")};
 `;
 
 export const CalendarIcon = styled(CalendarFill)`

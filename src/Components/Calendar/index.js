@@ -20,14 +20,14 @@ import {
   Table,
 } from "./styles";
 
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, Children } from "react";
 import axios from "axios";
 import { ExamsContext } from "../Context/ExamsContext";
 
 export default function Calendar() {
   const [data, setData] = useState([]);
 
-  const { funciona, day, setDay } = useContext(ExamsContext);
+  const { setDay } = useContext(ExamsContext);
 
   useEffect(() => {
     function getData() {
@@ -64,108 +64,118 @@ export default function Calendar() {
               <tbody>
                 <tr>
                   <TD day="OtherMonth">31</TD>
-                  {data
-                    .filter((datas, index) => index >= 0 && index < 5)
-                    .map((filtro) => {
-                      return (
-                        <>
-                          <TD
-                            onClick={(e) => {
-                              setDay(parseInt(e.target.textContent));
-                            }}
-                            day={filtro.status}
-                            status={filtro.status}
-                          >
-                            {filtro.dia}
-                          </TD>
-                        </>
-                      );
-                    })}
+                  {Children.toArray(
+                    data
+                      .filter((datas, index) => index >= 0 && index < 5)
+                      .map((filtro) => {
+                        return (
+                          <>
+                            <TD
+                              onClick={(e) => {
+                                setDay(parseInt(e.target.textContent));
+                              }}
+                              day={filtro.status}
+                              status={filtro.status}
+                            >
+                              {filtro.dia}
+                            </TD>
+                          </>
+                        );
+                      })
+                  )}
 
                   <TD day="Sunday">6</TD>
                 </tr>
                 <tr>
-                  {data
-                    .filter((datas, index) => index > 5 && index < 12)
-                    .map((filtro) => {
-                      return (
-                        <>
-                          <TD
-                            onClick={(e) => {
-                              setDay(parseInt(e.target.textContent));
-                            }}
-                            day={filtro.status}
-                            status={filtro.status}
-                          >
-                            {filtro.dia}
-                          </TD>
-                        </>
-                      );
-                    })}
+                  {Children.toArray(
+                    data
+                      .filter((datas, index) => index > 5 && index < 12)
+                      .map((filtro) => {
+                        return (
+                          <>
+                            <TD
+                              onClick={(e) => {
+                                setDay(parseInt(e.target.textContent));
+                              }}
+                              day={filtro.status}
+                              status={filtro.status}
+                            >
+                              {filtro.dia}
+                            </TD>
+                          </>
+                        );
+                      })
+                  )}
 
                   <TD day="Sunday">13</TD>
                 </tr>
                 <tr>
-                  {data
-                    .filter((datas, index) => index > 12 && index < 19)
-                    .map((filtro) => {
-                      return (
-                        <>
-                          <TD
-                            onClick={(e) => {
-                              setDay(parseInt(e.target.textContent));
-                            }}
-                            day={filtro.status}
-                            status={filtro.status}
-                          >
-                            {filtro.dia}
-                          </TD>
-                        </>
-                      );
-                    })}
+                  {Children.toArray(
+                    data
+                      .filter((datas, index) => index > 12 && index < 19)
+                      .map((filtro) => {
+                        return (
+                          <>
+                            <TD
+                              onClick={(e) => {
+                                setDay(parseInt(e.target.textContent));
+                              }}
+                              day={filtro.status}
+                              status={filtro.status}
+                            >
+                              {filtro.dia}
+                            </TD>
+                          </>
+                        );
+                      })
+                  )}
 
                   <TD day="Sunday">20</TD>
                 </tr>
 
                 <tr>
-                  {data
-                    .filter((datas, index) => index > 19 && index < 26)
-                    .map((filtro) => {
-                      return (
-                        <>
-                          <TD
-                            onClick={(e) => {
-                              setDay(parseInt(e.target.textContent));
-                            }}
-                            day={filtro.status}
-                            status={filtro.status}
-                          >
-                            {filtro.dia}
-                          </TD>
-                        </>
-                      );
-                    })}
+                  {Children.toArray(
+                    data
+                      .filter((datas, index) => index > 19 && index < 26)
+                      .map((filtro) => {
+                        return (
+                          <>
+                            <TD
+                              onClick={(e) => {
+                                setDay(parseInt(e.target.textContent));
+                              }}
+                              day={filtro.status}
+                              status={filtro.status}
+                            >
+                              {filtro.dia}
+                            </TD>
+                          </>
+                        );
+                      })
+                  )}
 
                   <TD day="Sunday">27</TD>
                 </tr>
                 <tr>
-                  {data
-                    .filter((datas, index) => index === 27)
-                    .map((filtro) => {
-                      return (
-                        <>
-                          <TD
-                            onClick={(e) => {
-                              setDay(parseInt(e.target.textContent));
-                            }}
-                            day={filtro.status}
-                            status={filtro.status}
-                          >
-                            {filtro.dia}
-                          </TD>
-                        </>
-                      );
-                    })}
+                  {Children.toArray(
+                    data
+                      .filter((datas, index) => index === 27)
+                      .map((filtro) => {
+                        return (
+                          <>
+                            <TD
+                              onClick={(e) => {
+                                setDay(parseInt(e.target.textContent));
+                              }}
+                              day={filtro.status}
+                              status={filtro.status}
+                            >
+                              {filtro.dia}
+                            </TD>
+                          </>
+                        );
+                      })
+                  )}
                   <TD day="OtherMonth">1</TD>
                   <TD day="OtherMonth">2</TD>
                   <TD day="OtherMonth">3</TD>
@@ -189,7 +199,7 @@ export default function Calendar() {
             </InsideProgress>
           </ProgressBar>
           <MonitoringText>
-            Aqui é possível visualizar o total em disco do servidor na nuvem
+            Aqui é possível visualizar o total em disco do servidor na nuvem.
           </MonitoringText>
           <MonitoringStatus>
             <div>

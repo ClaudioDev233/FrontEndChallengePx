@@ -6,27 +6,27 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
+          "horario": "10H-11H",
+          "status": "onGoing"
+        },
+        {
+          "tipo": "B",
+          "horario": "10H-11H",
+          "status": "doneWithErrors"
         },
         {
           "tipo": "C",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         },
         {
           "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
+          "horario": "11H-12H",
+          "status": "onGoing"
         },
         {
-          "tipo": "C",
-          "horario": "10-11",
-          "status": "done"
-        },
-        {
-          "tipo": "C",
-          "horario": "10-11",
+          "tipo": "A",
+          "horario": "12H-13H",
           "status": "done"
         }
       ]
@@ -38,7 +38,7 @@
     },
     {
       "dia": "3",
-      "status": "done",
+      "status": "",
       "examesDia": []
     },
     {
@@ -52,32 +52,47 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         },
         {
           "tipo": "B",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "11H-12H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "12H-13H",
+          "status": "doneWithErrors"
         },
         {
           "tipo": "C",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         },
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "11H-12H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "13H-14H",
           "status": "done"
         },
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "12H-13H",
           "status": "done"
         },
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "13H-14H",
           "status": "done"
         }
       ]
@@ -85,13 +100,7 @@
     {
       "dia": "6",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "7",
@@ -99,7 +108,7 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         }
       ]
@@ -110,17 +119,17 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         },
         {
           "tipo": "C",
-          "horario": "10-11",
-          "status": "ongoing"
+          "horario": "10H-11H",
+          "status": "onGoing"
         },
         {
           "tipo": "B",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "coisado"
         }
       ]
@@ -131,7 +140,7 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         }
       ]
@@ -142,8 +151,8 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
+          "horario": "10H-11H",
+          "status": "doneWithErrors"
         }
       ]
     },
@@ -153,18 +162,58 @@
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
           "status": "done"
         }
       ]
     },
     {
       "dia": "12",
-      "status": "",
+      "status": "done",
       "examesDia": [
         {
           "tipo": "A",
-          "horario": "10-11",
+          "horario": "10H-11H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "10H-11H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "11H-12H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "12H-13H",
+          "status": "doneWithErrors"
+        },
+        {
+          "tipo": "C",
+          "horario": "10H-11H",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "11H-12H",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "13H-14H",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "12H-13H",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "13H-14H",
           "status": "done"
         }
       ]
@@ -172,112 +221,76 @@
     {
       "dia": "13",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "14",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "15",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "16",
-      "status": "done",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "17",
-      "status": "done",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "18",
-      "status": "done",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "19",
-      "status": "done",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "20",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "21",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "22",
       "status": "",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": [{}]
     },
     {
       "dia": "23",
@@ -286,29 +299,23 @@
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "24",
       "status": "onGoing",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "examesDia": []
     },
     {
       "dia": "25",
-      "status": "",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
@@ -319,29 +326,23 @@
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     },
     {
       "dia": "27",
-      "status": "done",
-      "examesDia": [
-        {
-          "tipo": "A",
-          "horario": "10-11",
-          "status": "done"
-        }
-      ]
+      "status": "",
+      "examesDia": []
     },
     {
       "dia": "28",
-      "status": "",
+      "status": "onGoing",
       "examesDia": [
         {
           "tipo": "A",
           "horario": "10-11",
-          "status": "done"
+          "status": "onGoing"
         }
       ]
     }

@@ -20,7 +20,7 @@ import SearchBar from "../SearchInput/index";
 import Logo from "../../Assets/Images/logo.png";
 
 import { Link } from "react-router-dom";
-export default function Template({ children, title }) {
+export default function Template({ children, title, height }) {
   return (
     <>
       <TemplateContainer>
@@ -84,7 +84,7 @@ export default function Template({ children, title }) {
             </HeaderMenu>
           </TemplateHeader>
 
-          <ChildrenContainer>{children}</ChildrenContainer>
+          <ChildrenContainer height={height}>{children}</ChildrenContainer>
         </TemplateArea>
       </TemplateContainer>
     </>

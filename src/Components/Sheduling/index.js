@@ -17,6 +17,7 @@ import {
   SheduleRight,
 } from "./styles";
 import axios from "axios";
+import { Link } from "react-router-dom";
 export default function Shedule() {
   const { day, handleExams } = useContext(ExamsContext);
 
@@ -36,14 +37,6 @@ export default function Shedule() {
     getData();
   }, [day]);
 
-  /* function handleDays() {
-    data !== undefined ? console.log(data) : console.log("nao tem");
-  } */
-  /* useEffect(() => {
-    data !== undefined ? console.log(data) : console.log("nao tem");
-    console.log(day);
-  }, [day]); */
-
   return (
     <>
       <SheduleContent>
@@ -60,7 +53,16 @@ export default function Shedule() {
           <SheduleList>
             <SheduleListHeader>
               <Title>Listagem de Agendamentos</Title>
-              <SeeAll>Visualizar Todos &gt;</SeeAll>
+
+              <SeeAll>
+                <Link
+                  to={{
+                    pathname: "/todosAgendamentos",
+                  }}
+                >
+                  Visualizar Todos &gt;
+                </Link>
+              </SeeAll>
             </SheduleListHeader>
 
             {data.length > 0 ? (
@@ -70,7 +72,8 @@ export default function Shedule() {
                   return (
                     <>
                       <UpcomingShedule
-                        serverName={dia.tipo}
+                        tipo={dia.tipo}
+                        status={dia.status}
                         horario={dia.horario}
                         date={day}
                       ></UpcomingShedule>

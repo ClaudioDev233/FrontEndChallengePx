@@ -13,17 +13,14 @@ import {
   Placeholder,
 } from "./styles";
 
-export default function UpcomingShedule({ serverName, date, horario }) {
+export default function UpcomingShedule({ tipo, date, horario, status }) {
   return (
     <>
       <SheduleCard>
-        <CardColor color={serverName} />
+        <CardColor color={status} />
         <CardContent>
           <CardTitle>
-            <Title>
-              Exames do servidor {serverName === "A" ? "Snge" : "resto"}{" "}
-              {/* mudar o nome dos exames */}
-            </Title>
+            <Title>Exame Tipo {tipo}</Title>
             <Dates>
               <CalendarIcon />
               {date} de Fevereiro, 2022
@@ -35,10 +32,10 @@ export default function UpcomingShedule({ serverName, date, horario }) {
           </CardTitle>
           <CardDescription>
             <Placeholder></Placeholder>
-            <p>Nesse Agendamento contém todos os exames do tipo {serverName}</p>
+            <p>Esse agendamento contém um exame do tipo {tipo}</p>
           </CardDescription>
         </CardContent>
-        <Chevron color={serverName}> &gt; </Chevron>
+        <Chevron color={status}> &gt; </Chevron>
       </SheduleCard>
     </>
   );

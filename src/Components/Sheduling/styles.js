@@ -36,6 +36,10 @@ export const SheduleListHeader = styled.div`
 export const SeeAll = styled.p`
   font-size: 18px;
   color: #4cbc9a;
+  a {
+    text-decoration: none;
+    color: #4cbc9a;
+  }
 `;
 
 export const Title = styled.p`

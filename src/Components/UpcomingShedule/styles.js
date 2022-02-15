@@ -38,9 +38,9 @@ export const CardColor = styled.div`
   height: 96px;
   border-radius: 16px 0 0 16px;
   background-color: ${(props) =>
-    props.color === "C"
+    props.color === "done"
       ? "#4cbc9a"
-      : props.color === "B"
+      : props.color === "onGoing"
       ? "#FEC64F"
       : "#FC6B57"};
 `;
@@ -48,9 +48,9 @@ export const CardColor = styled.div`
 export const Chevron = styled.span`
   font-size: 30px;
   color: ${(props) =>
-    props.color === "C"
+    props.color === "done"
       ? "#4cbc9a"
-      : props.color === "B"
+      : props.color === "onGoing"
       ? "#FEC64F"
       : "#FC6B57"};
 
