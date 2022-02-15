@@ -20,10 +20,10 @@ import SearchBar from "../SearchInput/index";
 import Logo from "../../Assets/Images/logo.png";
 
 import { Link } from "react-router-dom";
-export default function Template({ children, title, height }) {
+export default function Template({ children, title }) {
   return (
     <>
-      <TemplateContainer height={height}>
+      <TemplateContainer>
         <nav>
           <TemplateMenu>
             <section>

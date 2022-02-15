@@ -8,7 +8,7 @@ import { Settings } from "@styled-icons/fluentui-system-filled/Settings";
 export const TemplateContainer = styled.section`
   display: flex;
   width: 100%;
-  height: ${(props) => (props.height === "fit" ? "100%" : "99vh")};
+  height: 100%;
   font-family: "Poppins", sans-serif;
   color: #374557;
 `;
@@ -85,7 +85,7 @@ export const HeaderMenu = styled.div`
 export const ChildrenContainer = styled.section`
   background-color: #fafafa;
   width: 100%;
-  height: 100%;
+  height: 95vh;
 `;
 
 export const CalendarIcon = styled(CalendarFill)`

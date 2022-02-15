@@ -62,8 +62,7 @@ export default function Shedule() {
               <Title>Listagem de Agendamentos</Title>
               <SeeAll>Visualizar Todos &gt;</SeeAll>
             </SheduleListHeader>
-            <p>Aparece aqui embaixo dias {day}</p>
-            {console.log(data)}
+
             {data.length > 0 ? (
               data
                 .filter((datas, index) => index <= 4)
@@ -79,7 +78,7 @@ export default function Shedule() {
                   );
                 })
             ) : (
-              <NoShedule></NoShedule>
+              <NoShedule date={day}></NoShedule>
             )}
             {/* esses cards serão gerados pelo contexto, tanto geral quanto do dia, logo esse componente também recebera informações do contexto */}
             {/* <UpcomingShedule serverName="C"></UpcomingShedule>

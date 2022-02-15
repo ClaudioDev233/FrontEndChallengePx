@@ -23,13 +23,13 @@ export function TodosAgendamentos() {
       <AllAppointmentsSection>
         {Children.toArray(
           data.map((todos) =>
-            todos.examesDia.map((todos) => {
+            todos.examesDia.map((dia) => {
               return (
                 <>
                   <UpcomingShedule
-                    serverName={todos.tipo}
-                    horario={todos.horario}
-                    date={day}
+                    serverName={dia.tipo}
+                    horario={dia.horario}
+                    date={todos.dia}
                   />
                 </>
               );
