@@ -4,6 +4,7 @@ import { Activity } from "@styled-icons/evaicons-solid/Activity";
 import { Notifications } from "@styled-icons/ionicons-solid/Notifications";
 import { ChatTextFill } from "@styled-icons/bootstrap/ChatTextFill";
 import { Settings } from "@styled-icons/fluentui-system-filled/Settings";
+import { LogOut } from "@styled-icons/boxicons-regular/LogOut";
 
 export const TemplateContainer = styled.section`
   display: flex;
@@ -113,6 +114,11 @@ export const SettingsIcon = styled(Settings)`
   width: 24px;
 `;
 
+export const LogOutIcon = styled(LogOut)`
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+`;
 export const Placeholder = styled.div`
   width: 60px;
   height: 60px;

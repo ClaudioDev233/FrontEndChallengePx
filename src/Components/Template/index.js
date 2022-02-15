@@ -13,14 +13,17 @@ import {
   ChildrenContainer,
   IconBox,
   TemplateArea,
+  LogOutIcon,
 } from "./styles";
 
 import SearchBar from "../SearchInput/index";
 
 import Logo from "../../Assets/Images/logo.png";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 export default function Template({ children, title, height }) {
+  const redirect = useNavigate();
   return (
     <>
       <TemplateContainer>
@@ -33,7 +36,7 @@ export default function Template({ children, title, height }) {
               <li>
                 <Link
                   to={{
-                    pathname: "/",
+                    pathname: "/Agendamentos",
                   }}
                 >
                   <Button>
@@ -78,6 +81,13 @@ export default function Template({ children, title, height }) {
 
               <IconBox>
                 <SettingsIcon />
+              </IconBox>
+              <IconBox>
+                <LogOutIcon
+                  onClick={() => {
+                    window.confirm("Deseja deslogar?") ? redirect("/") : <></>;
+                  }}
+                />
               </IconBox>
 
               <Placeholder></Placeholder>

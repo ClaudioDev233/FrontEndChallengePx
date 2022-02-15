@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext, Children } from "react";
+import { useState, useEffect, Children } from "react";
 
 import UpcomingShedule from "../../Components/UpcomingShedule";
 import {
@@ -14,7 +14,7 @@ export function AllAppointments() {
   const [data, setData] = useState([]);
 
   const [search, setSearch] = useState();
-  const [filteredData, setFilteredData] = useState([]); // esse filtro talvez vá para o contexto
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     function getData() {

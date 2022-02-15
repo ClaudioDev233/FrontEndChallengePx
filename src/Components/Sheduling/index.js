@@ -19,9 +19,7 @@ import {
 import axios from "axios";
 import { Link } from "react-router-dom";
 export default function Shedule() {
-  const { day, handleExams } = useContext(ExamsContext);
-
-  const [dailyExams, setDailyExams] = useState([]);
+  const { day } = useContext(ExamsContext);
 
   const [data, setData] = useState([]);
 
@@ -88,10 +86,6 @@ export default function Shedule() {
             ) : (
               <NoShedule date={day}></NoShedule>
             )}
-            {/* esses cards serão gerados pelo contexto, tanto geral quanto do dia, logo esse componente também recebera informações do contexto */}
-            {/* <UpcomingShedule serverName="C"></UpcomingShedule>
-            <UpcomingShedule serverName="B"></UpcomingShedule>
-            <UpcomingShedule serverName="A"></UpcomingShedule> */}
           </SheduleList>
         </SheduleLeft>
         <SheduleRight>
@@ -102,14 +96,3 @@ export default function Shedule() {
     </>
   );
 }
-
-/* data.map((coisos) => {
-  return (
-    <>
-      <UpcomingShedule
-        serverName={coisos.tipo}
-        horario={coisos.horario}
-        date={day}
-      ></UpcomingShedule>
-    </>
-  ); */
