@@ -43,7 +43,7 @@ export const ProgressBar = styled.div`
 `;
 
 export const Bar = styled.div`
-  width: 127px;
+  width: ${(props) => (props.size === "Complete" ? "127px" : "42.5px")};
   height: 16px;
   border-radius: 6px;
   background-color: ${(props) =>

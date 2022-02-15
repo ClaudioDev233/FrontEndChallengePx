@@ -9,7 +9,7 @@ import {
   Title,
 } from "./style";
 
-export default function Cards({ color, title, percentage }) {
+export default function Cards({ color, title, percentage, size }) {
   return (
     <>
       <Card>
@@ -19,7 +19,7 @@ export default function Cards({ color, title, percentage }) {
         <Progress>
           <Title>{title}</Title>
           <ProgressBar>
-            <Bar color={color}></Bar>
+            <Bar color={color} size={size}></Bar>
           </ProgressBar>
         </Progress>
         <Chavron color={color}> &gt; </Chavron>
