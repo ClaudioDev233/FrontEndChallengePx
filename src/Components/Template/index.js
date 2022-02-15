@@ -19,10 +19,10 @@ import SearchBar from "../SearchInput/index";
 
 import Logo from "../../Assets/Images/logo.png";
 
-export default function Template({ children }) {
+export default function Template({ children, title, height }) {
   return (
     <>
-      <TemplateContainer>
+      <TemplateContainer height={height}>
         <nav>
           <TemplateMenu>
             <section>
@@ -47,7 +47,7 @@ export default function Template({ children }) {
 
         <TemplateArea>
           <TemplateHeader>
-            <p>Agendamento</p>
+            <p>{title}</p>
 
             <SearchBar
               type="text"

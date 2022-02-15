@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { CalendarFill } from "@styled-icons/bootstrap/CalendarFill";
 import { Activity } from "@styled-icons/evaicons-solid/Activity";
-import { MagnifyingGlass } from "@styled-icons/foundation/MagnifyingGlass";
 import { Notifications } from "@styled-icons/ionicons-solid/Notifications";
 import { ChatTextFill } from "@styled-icons/bootstrap/ChatTextFill";
 import { Settings } from "@styled-icons/fluentui-system-filled/Settings";
@@ -9,7 +8,7 @@ import { Settings } from "@styled-icons/fluentui-system-filled/Settings";
 export const TemplateContainer = styled.section`
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: ${(props) => (props.height === "fit" ? "100%" : "99vh")};
   font-family: "Poppins", sans-serif;
   color: #374557;
 `;
@@ -18,7 +17,7 @@ export const TemplateMenu = styled.section`
   display: flex;
   align-items: center;
   width: 345px;
-  height:100%;
+  height: 100%;
   gap: 50px;
   padding-top: 6px;
   flex-direction: column;
@@ -54,8 +53,6 @@ export const Button = styled.div`
     background-color: #4cbc9a;
   }
 `;
-
-
 
 export const TemplateArea = styled.section`
   display: flex;

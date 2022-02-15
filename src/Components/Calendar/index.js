@@ -47,17 +47,7 @@ export default function Calendar() {
             <Title>Fevereiro</Title>
             <Arrow> &gt; </Arrow>
           </CalendarHeader>
-          {/* essa função vai para a pagina de listar todos */}
-          {data.map((coisos) =>
-            coisos.examesDia.map((coisitos) => {
-              return (
-                <>
-                  <p>tipo do exame {coisitos.tipo}</p>
-                  <p>horario {coisitos.horario}</p>
-                </>
-              );
-            })
-          )}
+
           <CalendarBody>
             <Table>
               <thead>
