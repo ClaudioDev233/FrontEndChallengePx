@@ -25,6 +25,9 @@ export const TemplateMenu = styled.section`
   li {
     margin: 20px;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Button = styled.div`

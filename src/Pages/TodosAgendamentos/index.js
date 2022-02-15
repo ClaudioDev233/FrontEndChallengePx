@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext, Children } from "react";
+import { ExamsContext } from "../../Components/Context/ExamsContext";
 import Template from "../../Components/Template";
 import UpcomingShedule from "../../Components/UpcomingShedule";
+import { AllAppointmentsSection } from "./styles";
 import axios from "axios";
-import { ExamsContext } from "../../Components/Context/ExamsContext";
 
 export function TodosAgendamentos() {
   const { day } = useContext(ExamsContext);
@@ -19,22 +20,23 @@ export function TodosAgendamentos() {
   return (
     <Template height="fit" title="Todos os Agendamentos">
       {/* essa função vai para a pagina de listar todos */}
-
-      {Children.toArray(
-        data.map((todos) =>
-          todos.examesDia.map((todos) => {
-            return (
-              <>
-                <UpcomingShedule
-                  serverName={todos.tipo}
-                  horario={todos.horario}
-                  date={day}
-                />
-              </>
-            );
-          })
-        )
-      )}
+      <AllAppointmentsSection>
+        {Children.toArray(
+          data.map((todos) =>
+            todos.examesDia.map((todos) => {
+              return (
+                <>
+                  <UpcomingShedule
+                    serverName={todos.tipo}
+                    horario={todos.horario}
+                    date={day}
+                  />
+                </>
+              );
+            })
+          )
+        )}
+      </AllAppointmentsSection>
     </Template>
   );
 }

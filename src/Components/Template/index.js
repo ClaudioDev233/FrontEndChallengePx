@@ -19,6 +19,7 @@ import SearchBar from "../SearchInput/index";
 
 import Logo from "../../Assets/Images/logo.png";
 
+import { Link } from "react-router-dom";
 export default function Template({ children, title, height }) {
   return (
     <>
@@ -30,16 +31,28 @@ export default function Template({ children, title, height }) {
             </section>
             <ul>
               <li>
-                <Button>
-                  <CalendarIcon></CalendarIcon>
-                  <p>Agendamento</p>
-                </Button>
+                <Link
+                  to={{
+                    pathname: "/",
+                  }}
+                >
+                  <Button>
+                    <CalendarIcon></CalendarIcon>
+                    <p>Agendamento</p>
+                  </Button>
+                </Link>
               </li>
               <li>
-                <Button>
-                  <ActivityIcon></ActivityIcon>
-                  <p>Todos os Agendamentos</p>
-                </Button>
+                <Link
+                  to={{
+                    pathname: "/todosAgendamentos",
+                  }}
+                >
+                  <Button>
+                    <ActivityIcon></ActivityIcon>
+                    <p>Todos os Agendamentos</p>
+                  </Button>
+                </Link>
               </li>
             </ul>
           </TemplateMenu>
