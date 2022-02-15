@@ -8,12 +8,32 @@
           "tipo": "A",
           "horario": "10-11",
           "status": "done"
+        },
+        {
+          "tipo": "C",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "C",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "C",
+          "horario": "10-11",
+          "status": "done"
         }
       ]
     },
     {
       "dia": "2",
-      "status": "done",
+      "status": "",
       "examesDia": []
     },
     {
@@ -28,8 +48,33 @@
     },
     {
       "dia": "5",
-      "status": "",
+      "status": "done",
       "examesDia": [
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "B",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "C",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        },
+        {
+          "tipo": "A",
+          "horario": "10-11",
+          "status": "done"
+        },
         {
           "tipo": "A",
           "horario": "10-11",

@@ -1,8 +1,10 @@
 import Calendar from "../Calendar";
 import Cards from "../Cards";
 import UpcomingShedule from "../UpcomingShedule";
-import { useContext, useState, useEffect } from "react";
+import NoShedule from "../NoShedule";
 import { ExamsContext } from "../Context/ExamsContext";
+import { useContext, useState, useEffect } from "react";
+
 import {
   SheduleContent,
   SheduleLeft,
@@ -60,19 +62,25 @@ export default function Shedule() {
               <Title>Listagem de Agendamentos</Title>
               <SeeAll>Visualizar Todos &gt;</SeeAll>
             </SheduleListHeader>
-            <p>Aparece aqui embaixo ; dias {day}</p>
+            <p>Aparece aqui embaixo dias {day}</p>
             {console.log(data)}
-            {data.map((coisos) => {
-              return (
-                <>
-                  <UpcomingShedule
-                    serverName={coisos.tipo}
-                    horario={coisos.horario}
-                    date={day}
-                  ></UpcomingShedule>
-                </>
-              );
-            })}
+            {data.length > 0 ? (
+              data
+                .filter((datas, index) => index <= 4)
+                .map((dia) => {
+                  return (
+                    <>
+                      <UpcomingShedule
+                        serverName={dia.tipo}
+                        horario={dia.horario}
+                        date={day}
+                      ></UpcomingShedule>
+                    </>
+                  );
+                })
+            ) : (
+              <NoShedule></NoShedule>
+            )}
             {/* esses cards serão gerados pelo contexto, tanto geral quanto do dia, logo esse componente também recebera informações do contexto */}
             {/* <UpcomingShedule serverName="C"></UpcomingShedule>
             <UpcomingShedule serverName="B"></UpcomingShedule>
@@ -87,3 +95,14 @@ export default function Shedule() {
     </>
   );
 }
+
+/* data.map((coisos) => {
+  return (
+    <>
+      <UpcomingShedule
+        serverName={coisos.tipo}
+        horario={coisos.horario}
+        date={day}
+      ></UpcomingShedule>
+    </>
+  ); */

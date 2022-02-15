@@ -25,6 +25,9 @@ export const CardTitle = styled.div`
 `;
 
 export const CardDescription = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-size: 14px;
   font-weight: 400;
   color: #a098ae;
@@ -71,6 +74,13 @@ export const Hours = styled.p`
   font-size: 14px;
   font-weight: 400;
   color: #a098ae;
+`;
+
+export const Placeholder = styled.div`
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background-color: #dbdbdb;
 `;
 
 export const CalendarIcon = styled(CalendarFill)`
