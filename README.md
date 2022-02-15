@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+<h1 align="center">Pixeon Challenge</h1>
 
-### `npm start`
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154162470-85540bff-38ba-465c-af30-5b376406c0bd.png"><img> </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Olá
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Esse é meu projeto destinado ao Challege de Front-End da Pixeon. Você poderá saber mais sobre o projeto e como subi-lo em seu ambiente abaixo: 
 
-### `npm test`
+## Instalação das dependências
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh!
+npm install
+```
+## Inicialização da aplicação 
 
-### `npm run build`
+```sh
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inicialização do Json-Server
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm run server
+```
+O endpoint que o Json-server oferece pode ser encontrado em (não se esqueça de que esse endpoint é local, ok?):
+```sh
+http://localhost:3001/exames
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Login
+O login é apenas visual, clique no botão Entrar para ser redirecionado à aplicação!
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154162242-3584f591-6baf-4933-9e1e-a053ba81db79.png"><img> </p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Página Inicial
+A página inicial mostra os agendamentos do dia atual.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154163620-dc0ef246-0b77-48b3-8051-1410c4a765ea.png"><img> </p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Calendário
+Ao clicar nos dias do calendário, os exames para aquele determinado dia são listados. Se no dia em questão não houverem agendamentos, o usuário recebe uma mensagem personalizada.
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154164993-55903963-8963-4a7b-809f-b0fe93ed742e.gif"><img> </p>
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Menu
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Com exceção do botão de logout, os demais botões são apenas visuais.
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154163734-5b62b1e1-0290-49df-b596-208eafc13fbb.png"><img> </p>
 
-### Code Splitting
+## Todos Agendamentos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ao clicar em "Visualizar Todos", ou em "Todos os Agendamentos" no menu lateral, será redirecionado para uma página que lista todos os agendamentos referente ao mês.
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154164040-e6fb75af-9d6f-4a26-b6d6-b2188989fc85.png"><img> </p>
 
-### Analyzing the Bundle Size
+### Filtrar por
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ao clicar em um dos botões, os exames serão filtrados por status de conclusão
+<p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154164239-92b3154f-8af6-422c-b82a-518d22d5507d.gif"><img> </p>
 
-### Making a Progressive Web App
+## Adeus:
+Espero que a documentação tenha ajudado na navegação da aplicação.
+Qualquer dúvida, sinta-se a vontade em me mandar uma mensagem aqui no GitHub. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Obrigado!
