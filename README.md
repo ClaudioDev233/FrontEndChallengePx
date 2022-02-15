@@ -61,8 +61,8 @@ Ao clicar em "Visualizar Todos", ou em "Todos os Agendamentos" no menu lateral, 
 Ao clicar em um dos botões, os exames serão filtrados por status de conclusão
 <p align="center"> <img  src="https://user-images.githubusercontent.com/93168209/154164239-92b3154f-8af6-422c-b82a-518d22d5507d.gif"><img> </p>
 
-## Adeus:
+## Obrigado!
 Espero que a documentação tenha ajudado na navegação da aplicação.
 Qualquer dúvida, sinta-se a vontade em me mandar uma mensagem aqui no GitHub. 
 
-Obrigado!
+
